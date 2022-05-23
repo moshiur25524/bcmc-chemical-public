@@ -16,7 +16,7 @@ const Header = () => {
                         <li><Link to='/'>Item 3</Link></li>
                     </ul>
                 </div>
-                <Link to='/' className="btn btn-ghost normal-case text-xl">daisyUI</Link>
+                <Link to='/' className="btn btn-ghost normal-case text-xl">BCMC</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
@@ -27,7 +27,7 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to='/' className="btn">Get started</Link>
+                <Link to='/login' className="btn">Login</Link>
             </div>
         </div>
     );

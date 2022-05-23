@@ -8,6 +8,8 @@ import BussinessSummary from './pages/BusinessSummary/BussinessSummary';
 import Header from './pages/Shared/Header';
 import Footer from './pages/Shared/Footer';
 import NotFound from './pages/NotFound/NotFound';
+import Login from './pages/login/Login';
+import Signup from './pages/login/Signup';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
          <Route path='/products' element={<Products></Products>}></Route>
          <Route path='/blogs' element={<Blogs></Blogs>}></Route>
          <Route path='/summary' element={<BussinessSummary></BussinessSummary>}></Route>
+         <Route path='/login' element={<Login></Login>}></Route>
+         <Route path='/signup' element={<Signup></Signup>}></Route>
          <Route path='/*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
