@@ -6,6 +6,7 @@ import Products from './pages/Products/Products';
 import Blogs from './pages/Blogs/Blogs';
 import BussinessSummary from './pages/BusinessSummary/BussinessSummary';
 import Header from './pages/Shared/Header';
+import Footer from './pages/Shared/Footer';
 import NotFound from './pages/NotFound/NotFound';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
          <Route path='/summary' element={<BussinessSummary></BussinessSummary>}></Route>
          <Route path='/*' element={<NotFound></NotFound>}></Route>
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }

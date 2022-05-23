@@ -4,7 +4,7 @@ const Product = ({ product }) => {
     const { img, name, minimum_Quantity, available_Quantity, price,short_description } = product;
     return (
         <div class="card w-96 bg-base-100 shadow-xl">
-            <figure><img src={img} alt="Shoes" /></figure>
+            <figure><img style={{height: '100'}} src={img} alt="Shoes" /></figure>
             <div class="card-body">
                 <h2 class="card-title">{name}</h2>
                 <p>{short_description}</p>
