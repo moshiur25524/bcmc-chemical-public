@@ -1,5 +1,5 @@
 import React from 'react';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 
@@ -13,6 +13,9 @@ const Signup = () => {
         loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
+
+    const [signInWithGoogle, guser, gloading, gerror] = useSignInWithGoogle(auth);
+
 
     const handleSignUpForm = event => {
         event.preventDefault();
@@ -63,7 +66,7 @@ const Signup = () => {
                             </div>
                         </form>
                         <div className="divider">OR</div>
-                        <button className="btn btn-accent">SIGNIN WITH GOOGLE</button>
+                        <button className="btn btn-accent" onClick={()=>signInWithGoogle()}>SIGNIN WITH GOOGLE</button>
                     </div>
                 </div>
             </div>
