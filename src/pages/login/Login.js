@@ -3,6 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { async } from '@firebase/util';
+import { toast } from 'react-toastify';
+import Loading from '../Shared/Loading';
 
 const Login = () => {
 
@@ -31,11 +33,15 @@ const Login = () => {
     const handleResetPassword = async (event) => {
         const email = event.target.email.value;
         await sendPasswordResetEmail(email);
-        alert('Sent email');
+        toast('Email sending to reset password')
     }
 
     if (user) {
         navigate('/products')
+    }
+
+    if(loading || gloading || sending){
+        return <Loading> </Loading>
     }
     return (
         <div className="hero min-h-screen bg-base-200">
@@ -62,7 +68,7 @@ const Login = () => {
                                     <p className="label-text-alt text-sm">Don't Have any Account? <Link to='/signup' className='text-secondary'>sing up now !</Link></p>
                                 </label>
                                 <label className="label">
-                                    <a href="#" className="label-text-alt link link-hover text-sm text-warning" onClick={handleResetPassword}>Forgot password?</a>
+                                    <button href="#" className="btn btn-link text-sm text-warning" onClick={handleResetPassword}>Forgot password?</button>
                                 </label>
                             </div>
                             <div className="form-control mt-6">
