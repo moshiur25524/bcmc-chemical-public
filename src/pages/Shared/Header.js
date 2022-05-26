@@ -18,6 +18,7 @@ const Header = () => {
                         <li><Link to='/'>Home</Link></li>
                         <li><Link to='/products'>Products</Link></li>
                         <li><Link to='/blogs'>Blogs</Link></li>
+                        <li><Link to='/profile'>My Profle</Link></li>
                         {
                             user && <li><Link to='/dashboard'>Dashboard</Link></li>
                         }
@@ -30,6 +31,7 @@ const Header = () => {
                     <li><Link to='/'>Home</Link></li>
                     <li><Link to='/products'>Products</Link></li>
                     <li><Link to='/blogs'>Blogs</Link></li>
+                    <li><Link to='/profile'>My Profile</Link></li>
                     {
                         user && <li><Link to='/dashboard'>Dashboard</Link></li>
                     }
@@ -37,7 +39,7 @@ const Header = () => {
             </div>
             <div className="navbar-end">
                 {
-                    user && <p>{}</p>
+                    user && <p>{ }</p>
                 }
                 {user ?
                     <button class="btn" onClick={() => signOut(auth)}>SIGNOUT</button>

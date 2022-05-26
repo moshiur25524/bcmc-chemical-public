@@ -19,12 +19,13 @@ import MyProfile from './pages/Dashboard/MyProfile';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Header></Header>
       <Routes>
          <Route path='/' element={<Home></Home>}></Route>
          <Route path='/products' element={<Products></Products>}></Route>
          <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+         <Route path='/profile' element={<MyProfile></MyProfile>}></Route>
          <Route path='/summary' element={<BussinessSummary></BussinessSummary>}></Route>
          <Route path='/purchase' element={
            <RequireAuth>
@@ -38,7 +39,7 @@ function App() {
          }>
            <Route index element={<MyOrders></MyOrders>}></Route>
            <Route path='reviews' element={<Review></Review>}></Route>
-           <Route path='profile' element={<MyProfile></MyProfile>}></Route>
+           {/* <Route path='profile' element={<MyProfile></MyProfile>}></Route> */}
          </Route>
          <Route path='/login' element={<Login></Login>}></Route>
          <Route path='/signup' element={<Signup></Signup>}></Route>
