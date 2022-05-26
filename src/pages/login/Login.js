@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { async } from '@firebase/util';
@@ -9,6 +9,8 @@ import Loading from '../Shared/Loading';
 const Login = () => {
 
     const navigate = useNavigate()
+    const location = useLocation()
+    let from = location.state?.from?.pathname || "/";
 
     const [
         signInWithEmailAndPassword,
@@ -35,14 +37,15 @@ const Login = () => {
         await sendPasswordResetEmail(email);
         toast('Email sending to reset password')
     }
-
-    if (user) {
-        navigate('/products')
-    }
-
     if(loading || gloading || sending){
         return <Loading> </Loading>
     }
+
+    if (user) {
+        navigate(from, { replace: true });
+    }
+
+
     return (
         <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col lg:flex-row-reverse">
