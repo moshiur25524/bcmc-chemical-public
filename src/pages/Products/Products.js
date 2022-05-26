@@ -5,13 +5,13 @@ const Products = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(()=>{
-        fetch('tools.json')
+        fetch('http://localhost:5000/chemicals')
         .then(res => res.json())
         .then(data => setProducts(data))
     },[])
     return (
         <div>
-            <h1>It contain all Kinds of Products : {products.length}</h1>
+            <h1 className='text-center text-accent font-bold text-6xl my-12'>Our Chemicals</h1>
             <div className='grid grid-rows-2 grid-flow-col gap-4'>
             {
                 products.map(product => <Product

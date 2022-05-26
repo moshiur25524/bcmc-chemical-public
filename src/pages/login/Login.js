@@ -74,6 +74,7 @@ const Login = () => {
                             <div className="form-control mt-6">
                                 <input type="submit" value="LOGIN" className='btn btn-primary' />
                             </div>
+                            
                         </form>
                         <div className="divider">OR</div>
                         <button className="btn btn-accent" onClick={() => signInWithGoogle()}>SIGNIN WITH GOOGLE</button>
