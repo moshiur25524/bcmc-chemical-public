@@ -37,7 +37,7 @@ const Login = () => {
         await sendPasswordResetEmail(email);
         toast('Email sending to reset password')
     }
-    if(loading || gloading || sending){
+    if (loading || gloading || sending) {
         return <Loading> </Loading>
     }
 
@@ -71,13 +71,17 @@ const Login = () => {
                                     <p className="label-text-alt text-sm">Don't Have any Account? <Link to='/signup' className='text-secondary'>sing up now !</Link></p>
                                 </label>
                                 <label className="label">
-                                    <button href="#" className="btn btn-link text-sm text-warning" onClick={handleResetPassword}>Forgot password?</button>
+                                    <button href="#" className="btn btn-link text-sm text-warning" onClick={async (event) => {
+                                        const email = event.target.email.value;
+                                        await sendPasswordResetEmail(email);
+                                        alert('Sent email');
+                                    }}>Forgot password?</button>
                                 </label>
                             </div>
                             <div className="form-control mt-6">
                                 <input type="submit" value="LOGIN" className='btn btn-primary' />
                             </div>
-                            
+
                         </form>
                         <div className="divider">OR</div>
                         <button className="btn btn-accent" onClick={() => signInWithGoogle()}>SIGNIN WITH GOOGLE</button>

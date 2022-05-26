@@ -6,6 +6,7 @@ import auth from '../../firebase.init';
 
 const Header = () => {
     const [user, loading, error] = useAuthState(auth);
+    console.log(user);
     return (
         <div className="navbar bg-base-100">
             <div className="navbar-start">
@@ -35,6 +36,9 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
+                {
+                    user && <p>{}</p>
+                }
                 {user ?
                     <button class="btn" onClick={() => signOut(auth)}>SIGNOUT</button>
                     :

@@ -1,10 +1,14 @@
-# Getting Started with Create React App
+# BCMC CHEMICAL (Bangladesh Chemical Manufacturer Company)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Live Site of Website [BCMC(Bangladesh Chemical Manufacturer Company)](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## All Features and Funtionality of the website
 
-In the project directory, you can run:
+* This website is about chemicals and all types of Chemicals you need in industry
+* At the Home page, Navba, a caurosel banner, some chemicals of our collection, our business Summary and some more section is attached in it.
+* Clicking in the Buy Now button, user will to the purchase page and it is a protected route. Only log in user can explore this page.
+* In the navbar, Dashboard can be seen if the user is loged in. In the Dashboard, user can see the whole order of his own. Reviews, my Profile also added in the Dashboard as a nested route.
+* Finally, Payment system also implemented in this website. Anybody can buy anything by paying of that chemical.
 
 ### `npm start`
 
