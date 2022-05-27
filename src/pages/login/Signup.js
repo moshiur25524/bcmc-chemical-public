@@ -1,10 +1,11 @@
-import React from 'react';
-import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import React, { useState } from 'react';
+import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 const Signup = () => {
 
+    const [displayName, setDisplayName] = useState('');
     const navigate = useNavigate()
 
     const [
@@ -13,6 +14,8 @@ const Signup = () => {
         loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
+
+    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
     const [signInWithGoogle, guser, gloading, gerror] = useSignInWithGoogle(auth);
 

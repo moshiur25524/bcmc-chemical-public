@@ -26,6 +26,9 @@ const Blogs = () => {
                 <span className='font-bold'>URL State: </span>URL state exists on the url parameter.  pathname and query parameter also included with the url state
             </p>
             <h2 className='text-2xl text-slate-700'>3. How does prototypical inheritance work?</h2>
+            <p>
+                Proptotype is a method of get and set the value of an object. The value of the object can be a nested object. There are different types of portotype. Every object type has there own portotype. JavaScript is a prototype based Language.
+            </p>
             <h2 className='text-2xl text-slate-700'>4. Why you do not set the state directly in React. Why you do not set products = [...] instead, you use the setProducts</h2>
             <h2 className='text-2xl text-slate-700'>5. You have an array of products. Each product has a name, price, description, etc. How will you implement a search to find products by name?</h2>
         </div>
