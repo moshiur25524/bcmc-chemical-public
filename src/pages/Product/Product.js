@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {FaShoppingCart} from 'react-icons/fa'
 
 const Product = ({ product }) => {
     const { img, name, minimum_Quantity, available_Quantity, price,short_description } = product;
@@ -14,7 +15,7 @@ const Product = ({ product }) => {
                 <p>Available Quantity: {available_Quantity}</p>
                 <p><small>Price: ${price}</small> (per Unit)</p>
                 <div className="card-actions justify-end">
-                    <button className="btn btn-secondary"><Link to='/purchase'>Buy Now</Link></button>
+                    <button className="btn btn-secondary"><Link to='/purchase'><FaShoppingCart class="inline-block w-8 h-8 stroke-current"/> Buy Now</Link></button>
                 </div>
             </div>
         </div>
