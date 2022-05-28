@@ -43,7 +43,7 @@ const Header = () => {
                     user && <p>{ }</p>
                 }
                 {user ?
-                    <button class="btn" onClick={() => signOut(auth)}>SIGNOUT</button>
+                    <button className="btn" onClick={() => signOut(auth)}>SIGNOUT</button>
                     :
                     <Link to='/login' className="btn">Login</Link>}
             </div>
