@@ -1,6 +1,6 @@
 # BCMC CHEMICAL (Bangladesh Chemical Manufacturer Company)
 
-The Live Site of Website [BCMC(Bangladesh Chemical Manufacturer Company)](https://github.com/facebook/create-react-app).
+The Live Site of Website [BCMC(Bangladesh Chemical Manufacturer Company)](https://bcmc-chemical.web.app/).
 
 ## All Features and Funtionality of the website
 
