@@ -1,11 +1,11 @@
 # BCMC CHEMICAL (Bangladesh Chemical Manufacturer Company)
 
-The Live Site of Website [BCMC(Bangladesh Chemical Manufacturer Company)](https://bcmc-chemical.web.app/).
+The Live Site of the Website [BCMC(Bangladesh Chemical Manufacturer Company)](https://bcmc-chemical.web.app/).
 
 ## All Features and Funtionality of the website
 
 * This website is about chemicals and all types of Chemicals you need in industry
-* At the Home page, Navba, a caurosel banner, some chemicals of our collection, our business Summary and some more section is attached in it.
+* At the Home page, Navbar, a caurosel banner, some chemicals of our collection, our business Summary and some more extra section is attached in it.
 * Clicking in the Buy Now button, user will to the purchase page and it is a protected route. Only log in user can explore this page.
 * In the navbar, Dashboard can be seen if the user is loged in. In the Dashboard, user can see the whole order of his own. Reviews, my Profile also added in the Dashboard as a nested route.
 * Finally, Payment system also implemented in this website. Anybody can buy anything by paying of that chemical.
